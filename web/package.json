@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.4",
     "autoprefixer": "^10.4.13",
     "phosphor-react": "^1.4.1",
     "post": "^0.0.1",
