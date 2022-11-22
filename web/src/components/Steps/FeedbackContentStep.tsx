@@ -1,11 +1,14 @@
+import { ArrowLeft } from "phosphor-react";
 import { CloseButton } from "../CloseButton";
 import { FeedbackType, feedbackTypes } from "../WidgetForm";
 
 interface FeedbackContentStepProps {
-    feedbackType: FeedbackType;
+    feedbackType: FeedbackType
+    onFeedbackRestartRequested: () => void
 }
 export function FeedbackContentStep({
-    feedbackType,
+    feedbackType, 
+    onFeedbackRestartRequested
 }: FeedbackContentStepProps) {
     const feedbackTypeInfo = feedbackTypes[feedbackType];
 
@@ -13,6 +16,12 @@ export function FeedbackContentStep({
         //Fragment
         <>
             <header>
+              <button type="button" 
+              className="top-5 left-5 absolute text-zinc-400 hover:text-zinc-100" 
+              onClick={onFeedbackRestartRequested}>
+              
+                <ArrowLeft weight="bold" className="w-4 h4"/>
+              </button>
                 <span className="text-xl leading-6 flex items-center gap-2">
                   <img src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.alt} className="w-6 h-6"></img>
                   {feedbackTypeInfo.title}</span>
