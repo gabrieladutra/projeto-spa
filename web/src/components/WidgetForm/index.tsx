@@ -49,6 +49,7 @@ export function WidgetForm(){
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null)
   const [feedbackSent, setFeedbackSent] = useState(false)
   function handleRestartFeedback(){
+    setFeedbackSent(false)
     setFeedbackType(null)
   }
   return (
@@ -56,7 +57,7 @@ export function WidgetForm(){
   
 
 {feedbackSent ? (
-  <FeedbackSuccessStep/>) : (
+  <FeedbackSuccessStep onFeedbackRestartRequested={handleRestartFeedback}/>) : (
     <>
     {!feedbackType ?(
   <FeedbackTypeStep onFeedbackTypeChanged={setFeedbackType}/>

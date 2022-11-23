@@ -9,15 +9,15 @@ interface ScreenshotButtonProps{
   
 }
 export function ScreenshotButton ({screenshot,onScreenshotTook}: ScreenshotButtonProps){
-  const [isTakingScreenshot, setTakingScreenshot] = useState(false)
+  const [isTakingScreenshot, setIsTakingScreenshot] = useState(false)
   async function handleTakeScreenshot(){
-    setTakingScreenshot(true)
+    setIsTakingScreenshot(true)
 
     const canvas = await html2canvas(document.querySelector('html')!)
     const base64image = canvas.toDataURL('img/png')
     
     onScreenshotTook(base64image)
-    setTakingScreenshot(false)
+    setIsTakingScreenshot(false)
   }
   if(screenshot){
     return (
