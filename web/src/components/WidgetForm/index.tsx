@@ -24,13 +24,13 @@ IDEIA: {
     alt:'Imagem de uma lâmpada'
   }
 },
-COMPLIMENTS:{
-  title:'Elogio',
-  image: {
-    source:complimentImageUrl,
-    alt:'Imagem de um sinal de like'
-  }
-},
+// COMPLIMENTS:{
+//   title:'Elogio',
+//   image: {
+//     source:complimentImageUrl,
+//     alt:'Imagem de um sinal de like'
+//   }
+// },
 OTHER:{
   title:'Outro',
   image: {
