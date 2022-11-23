@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url= env("DATABASE_URL")
+}
+
+// prisma cria a tabela no BD
+// Universal Unique ID
+
+model Feedback{
+  id String @id @default(uuid())
+
+  type String
+  comment String
+  screenshot String?
+
+
+ @@map("feedbacks")
+}
