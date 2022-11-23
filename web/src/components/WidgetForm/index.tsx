@@ -5,6 +5,7 @@ import ideaImageUrl from "../../assets/ideia.svg"
 import thoughtImageUrl from "../../assets/thought.svg"
 import { FeedbackTypeStep } from "../Steps/FeedbackTypeStep";
 import { FeedbackContentStep } from "../Steps/FeedbackContentStep";
+import complimentImageUrl from "../../assets/compliment.svg"
 
 
 export const feedbackTypes = {
@@ -23,14 +24,22 @@ IDEIA: {
     alt:'Imagem de uma lâmpada'
   }
 },
-
+COMPLIMENTS:{
+  title:'Elogio',
+  image: {
+    source:complimentImageUrl,
+    alt:'Imagem de um sinal de like'
+  }
+},
 OTHER:{
   title:'Outro',
   image: {
     source:thoughtImageUrl,
     alt:'Imagem de um inseto'
   }
-}
+},
+
+
 }
 
 export type FeedbackType = keyof typeof feedbackTypes
@@ -54,7 +63,7 @@ export function WidgetForm(){
   }
 
 <footer className="text-xs text-neutral-400">
-  Feito com 🖤 por <a className="underline underline-offset-2"> Gabriela D. Dutra</a> 
+  Feito com 💜 por <a className="underline underline-offset-2"> Gabriela D. Dutra</a> 
 </footer>
   </div>
   )
