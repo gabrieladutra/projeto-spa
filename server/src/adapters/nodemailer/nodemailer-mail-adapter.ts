@@ -6,19 +6,18 @@ const transport = nodemailer.createTransport({
   host: "smtp.mailtrap.io",
   port: 2525,
   auth: {
-      user: "e692c0bcadd1bc",
-      pass: "9c72523c22b6ba",
+    user: "3ab9cdfffa60b2",
+    pass: "4495a6436b1537"
   },
 });
 
-export class NodeMailerAdapter implements MailAdapter {
-  async sendMail({subject,body}: SendMailData){
+export class NodemailerMailAdapter implements MailAdapter {
+  async sendMail({ subject, body }: SendMailData) {
     await transport.sendMail({
         from: "Equipe FeedGet",
         to: "Gabriela Dutra <gabriela_ddutra@outlook.com>",
         subject,
-        html: body
-        
+        html: body,
     });
     
   }

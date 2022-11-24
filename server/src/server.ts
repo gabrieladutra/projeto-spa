@@ -1,13 +1,14 @@
 import express from "express";
+import cors from "cors";
 import { routes } from "./routes";
-import cors from 'cors'
 
 const app = express();
+const port = process.env.PORT || 3333;
 
-app.use(cors())
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
-app.listen(3333, () => {
-    console.log("HTTP server running!");
+app.listen({ port: port, hostname: "back-end" }, () => {
+    console.log(`HTTP server running on http://localhost:${port}`);
 });
