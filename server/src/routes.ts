@@ -18,7 +18,7 @@ const transport = nodemailer.createTransport({
 routes.post("/feedbacks", async (req, res) => {
     const { type, comment, screenshot } = req.body;
     const prismaFeedbacksRepository = new PrismaFeedbacksRepository()
-    const submitFeedbackUseCase = new SubmitFeedbackUseCase(PrismaFeedbacksRepository)
+    const submitFeedbackUseCase = new SubmitFeedbackUseCase(prismaFeedbacksRepository)
     await submitFeedbackUseCase.execute({
       type,
       comment,
@@ -35,5 +35,5 @@ routes.post("/feedbacks", async (req, res) => {
     //         `</div>`,
     //     ].join("\n"),
     // });
-    return res.status(201).json({ data: feedback });
+    return res.status(201).send();
 });
