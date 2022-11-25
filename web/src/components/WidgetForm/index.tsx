@@ -18,7 +18,7 @@ BUG:{
   }
 },
 
-IDEIA: {
+IDEA: {
   title:'Ideia',
   image: {
     source:ideaImageUrl,
@@ -26,14 +26,14 @@ IDEIA: {
   }
 },
 COMPLIMENTS:{
-  title:'Elogio',
+  title:'Elogios',
   image: {
     source:complimentImageUrl,
     alt:'Imagem de um sinal de like'
   }
 },
 OTHER:{
-  title:'Outro',
+  title:'Outro ...',
   image: {
     source:thoughtImageUrl,
     alt:'Imagem de um inseto'

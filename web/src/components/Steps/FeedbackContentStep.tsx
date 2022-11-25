@@ -12,6 +12,12 @@ interface FeedbackContentStepProps {
     onFeedbackSent: () => void;
   }
   
+  const feedbackTypesPlaceholders = {
+    BUG: "Ah não! Algo não está funcionando bem? Conte em detalhes o que está acontecendo, gostaríamos de te ouvir!",
+    IDEA: "Você teve alguma ideia de melhoria ou de uma nova funcionalidade? Ficaremos felizes em te ouvir!",
+    COMPLIMENTS: "Um elogio sempre será bem vindo!",
+    OTHER: "O que mais você gostaria de nos dizer? ",
+  };
   export function FeedbackContentStep({
     feedbackType,
     onFeedbackRestartRequested,
@@ -24,15 +30,12 @@ interface FeedbackContentStepProps {
   
     const feedbackTypeInfo = feedbackTypes[feedbackType]
   
+ 
+    const placeholder = feedbackTypesPlaceholders[feedbackType];
     async function handleSubmitFeedback(event: FormEvent) {
       event.preventDefault();
   
       setIsSendingFeedback(true);
-  
-      // console.log({
-      //   screenshot,
-      //   comment
-      // })
   
       await api.post('/feedbacks', {
         type: feedbackType,
@@ -67,7 +70,7 @@ interface FeedbackContentStepProps {
           <form onSubmit={handleSubmitFeedback} className="my-4 w-full">
             <textarea
               className="min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 focus:outline-none resize-none scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin hover:scrollbar-thumb-zinc-500"
-              placeholder="Conte com detalhes o que está acontecendo..."
+              placeholder={placeholder}
               onChange={event => setComment(event.target.value)}
             />
   
