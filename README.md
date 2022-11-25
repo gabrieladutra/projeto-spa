@@ -40,7 +40,7 @@ Projeto desenvolvido para a disciplina de desenvolvimento WEB II do IFSP
 
 ##### _Vercel_ (_Front-end_)
 
-- <https://projeto-spa-pxdn-43oz3vvga-gabrieladutra.vercel.app/>
+- <https://projeto-spa-pxdn.vercel.app/>
 
 ##### _Railway_ (_Back-end_ com banco de dados _PostgreSQL_ e envio de e-mail para _Mailtrap_)
 
