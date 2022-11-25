@@ -19,8 +19,6 @@ Projeto desenvolvido para a disciplina de desenvolvimento WEB II do IFSP
 
 ## 🔧 Tecnologias utilizadas
 
-### 👨🏻‍🚀 Stage 1/5
-
 - **NodeJS LTS** 
 - **Vite**
 - **Tailwind CSS** com Postconfig CSS  
@@ -53,4 +51,6 @@ Projeto desenvolvido para a disciplina de desenvolvimento WEB II do IFSP
 
 Licenciado sob a licença do [MIT](LICENSE.txt).
 
-> Feito com 💜 por Gabriela D. Dutra
+<div align="center">
+Feito com 💜 por Gabriela D. Dutra
+</div>
